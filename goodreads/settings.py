@@ -145,13 +145,13 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'asadbekabdumalikov123@gmail.com'
-EMAIL_HOST_PASSWORD = 'rchliqmvyauiytbx'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'asadbekabdumalikov123@gmail.com'
+# EMAIL_HOST_PASSWORD = '1a2s3a4dd5b'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_USE_SSL = False
 
 
 CELERY_BROOKER_URL = 'amqp://guest:guest@127.0.0.1:5672//'
