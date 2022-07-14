@@ -164,3 +164,5 @@ REST_FRAMEWORK = {
 
 # Activate django-heroku.
 django_heroku.settings(locals())
+
+ALLOWED_HOSTS = ['asadbekproject.herokuapp.com', 'localhost', '127.0.0.1']

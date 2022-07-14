@@ -25,7 +25,6 @@
                 </div>
                 <div class="col-6 ms-4">
                     <h5>{{ book.title }}</h5>
-                    {% comment %}  {% endcomment %}
                     <p>{{ book.description | truncatechars:600 }}</p>
 
                     <span><a class="sea-more" href="{% url 'books:detail' book.id %}">Sea more➩</a></span>
