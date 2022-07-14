@@ -152,7 +152,7 @@ class ProfileTestCase(TestCase):
     
     def test_profile_details(self):
         user = CustomUser.objects.create( 
-            username="asadbek", first_name="Asadbek", last_name="Abdumalikov", email="asadbekabdmualikovfifth@gmail.com"
+            username="asadbek", first_name="Asadbek", last_name="Abdumalikov", email="asadbekabdumalikovfifth@gmail.com"
         )
         
         user.set_password("somepassword")
@@ -172,7 +172,7 @@ class ProfileTestCase(TestCase):
 
     def test_update_profile(self):
         user = CustomUser.objects.create(
-            username="asadbek",  first_name="Asadbek", last_name="Abdumalikov", email="asadbekabdmualikovfifth@gmail.com"
+            username="asadbek",  first_name="Asadbek", last_name="Abdumalikov", email="asadbekabdumalikovfifth@gmail.com"
         )
         
         user.set_password("somepassword")

@@ -31,9 +31,11 @@ INSTALLED_APPS = [
 
     "crispy_forms",
     "crispy_bootstrap5",
+    'rest_framework',
 
     'books',
     'users',
+    'api'
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
@@ -113,7 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tashkent'
 
 USE_I18N = True
 
@@ -137,3 +139,21 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'asadbekabdumalikov123@gmail.com'
+EMAIL_HOST_PASSWORD = 'rchliqmvyauiytbx'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+
+
+CELERY_BROOKER_URL = 'amqp://guest:guest@127.0.0.1:5672//'
+DJANGO_SETTINGS_MODULE = "goodreads.settings"
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 2
+}
