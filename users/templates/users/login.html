@@ -6,9 +6,9 @@
 
 {% block content %}
 
-    {% comment %} <h3>Login </h3> {% endcomment %}
+    <h3>Login </h3> 
 
-    {% comment %} <div class="row">
+    <div class="row">
         <div class="col-5">
             <form method="post">
                 {% csrf_token %}
@@ -18,10 +18,10 @@
                 <button type="submit" class="btn btn-outline-secondary">Log in</button> <span class="ms-3">If you have not an account! You <a href="{% url 'users:register' %}">must register</a></span>
             </form>
         </div>
-    </div> {% endcomment %}
+    </div> 
 
 
-
+{% comment %} 
         <section class="vh-100 bg-image"
             style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBZ2uUGBr1LipOjBCNX-D0vLh8_LpkWktTM1ydDICl-dGbWSCUqUWAxPWwl0mLQVWYtzs&usqp=CAU'); background-size:cover;">
             <div class="mask d-flex align-items-center h-100 ">
@@ -54,7 +54,7 @@
                 </div>
             </div>
         </section>
-
+ {% endcomment %}
 
 
 
