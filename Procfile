@@ -1,1 +1,2 @@
-web: gunicorn goodreads.wsgi
+release: python manage.py migrate
+web: gunicorn goodreads.wsgi --log-file=-

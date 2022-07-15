@@ -25,7 +25,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['goodreads-site.heroku.com']
 
 LOGIN_URL = "users:login"
 
@@ -140,11 +140,14 @@ MEDIA_ROOT = "media-files"
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# Activate django-heroku.
+django_heroku.settings(locals())
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -169,7 +172,6 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 2
 }
 
-# Activate django-heroku.
-django_heroku.settings(locals())
+
 
 # ALLOWED_HOSTS = ['asadbekproject.herokuapp.com', 'localhost', '127.0.0.1']

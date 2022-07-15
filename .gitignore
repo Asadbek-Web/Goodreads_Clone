@@ -2,3 +2,6 @@
 venv
 .env
 media-files
+
+
+psql --host=ec2-34-235-198-25.compute-1.amazonaws.com --port=5432 --username=opqdeswkktmziw --password --dbname=dcl3buiobqlsv7
