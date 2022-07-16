@@ -20,12 +20,12 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = "django-insecure-!6!6#x*jol$o3chpg^i*zy-zt@eqq55_^c@-%x&#747$b(mema"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env('DEBUG')
+DEBUG = False
 
-ALLOWED_HOSTS = ['goodreads--project.heroku.com']
+ALLOWED_HOSTS = ['goodreads--project.herokuapp.com']
 
 LOGIN_URL = "users:login"
 
@@ -92,11 +92,11 @@ WSGI_APPLICATION = 'goodreads.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env('DB_NAME'),
-        'HOST': env('DB_HOST'),
+        'NAME': 'goodreads',
+        'HOST': '127.0.0.1',
         'PORT': '5432',
-        'USER': env('DB_USER'),
-        'PASSWORD': env('DB_PASSWORD')
+        'USER': 'postgres',
+        'PASSWORD': 'postgres'
     }
 }
 
