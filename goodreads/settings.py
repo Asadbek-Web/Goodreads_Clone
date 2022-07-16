@@ -4,7 +4,6 @@ import django_heroku
 
 
 from pathlib import Path
-from django.core.exceptions import ImproperlyConfigured
 
 env = environ.Env(
     # set casting, default value
@@ -15,15 +14,7 @@ env = environ.Env(
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
-def get_env_variable(var_name):
-    try:
-        return os.environ[var_name]
-    except KeyError:
-        error_msg = "set the %s environment variable" % var_name
-        raise ImproperlyConfigured(error_msg)
 
-
-SECRET_KEY = get_env_variable('SECRET_KEY')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -150,13 +141,11 @@ MEDIA_ROOT = "media-files"
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
-
-# Activate django-heroku.
-django_heroku.settings(locals())
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -183,4 +172,5 @@ REST_FRAMEWORK = {
 
 
 
-# ALLOWED_HOSTS = ['asadbekproject.herokuapp.com', 'localhost', '127.0.0.1']
+# Activate django-heroku.
+django_heroku.settings(locals())
