@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-!6!6#x*jol$o3chpg^i*zy-zt@eqq55_^c@-%x&#747$b(mema
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['goodreads--project.herokuapp.com']
+# ALLOWED_HOSTS = ['goodreads--project.herokuapp.com']
 
 LOGIN_URL = "users:login"
 
