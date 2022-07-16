@@ -25,7 +25,7 @@ SECRET_KEY =os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG')
 
-# ALLOWED_HOSTS = ['goodreads--project.herokuapp.com']
+ALLOWED_HOSTS = ['goodreads--project.herokuapp.com']
 
 LOGIN_URL = "users:login"
 
