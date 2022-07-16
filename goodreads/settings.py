@@ -25,7 +25,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = ['goodreads-site.heroku.com']
+ALLOWED_HOSTS = ['goodreads--project.heroku.com']
 
 LOGIN_URL = "users:login"
 
